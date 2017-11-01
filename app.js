@@ -52,13 +52,20 @@ app.get('/tokenexchange', (req, res) => {
 });
 
 app.get('/logbook', (req, res) => {
-	var code = req.query.code;
-	strava.athlete.get({ 'access_token': code }, function (err, payload, limits) {
+	var arg = req.query.code;
+
+	strava.athlete.get({ 'access_token': arg }, function (err, payload, limits) {
 		var athlete = {};
 		athlete.firstname = payload.firstname;
-		athlete.lastname = payload.lastname;
+		athlete.city = payload.city;
+		athlete.profile = payload.profile;
 		res.render('logbook', {athleteInfo: athlete});
 	});
+});
+
+app.get('/logout', (req, res) => { 
+	req.session.destroy();
+	res.redirect('/');
 });
 
 // -------------------------------------------------- Initialize app

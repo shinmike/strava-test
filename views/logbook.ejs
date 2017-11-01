@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logbook</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
-  <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-</head>
+<% include ./partials/head %>
 
 <body>
 
@@ -26,30 +16,20 @@
   <div class="row">
 
 
-    <div class="large-3 columns ">
+    <div style="text-align:center" class="large-3 columns ">
       <div class="panel">
-        <h5>Hello, <%= athleteInfo.firstname %></h5>
+        <h4>Hello, <%= athleteInfo.firstname %></h4>
+        <h5><b><%= athleteInfo.city %></b></h5>
 
-        <ul>
+        <!-- <ul>
           <% for (var key in athleteInfo) { %>
             <li>
               <strong><%= key %>: </strong> <%= athleteInfo[key] %>
             </li>
           <% } %>
-        </ul>
+        </ul> -->
 
-        <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-          <section class="section">
-            <h5 class="title"><a href="#">Section 1</a></h5>
-          </section>
-          <section class="section">
-            <h5 class="title"><a href="#">Section 2</a></h5>
-          </section>
-          <section class="section">
-            <h5 class="title"><a href="#">Section 3</a></h5>
-          </section>
-        </div>
-        <a href="#"><img src="https://placehold.it/300x240&text=[img]" /></a>
+        <a href="#"><img src=<%= athleteInfo.profile %> /></a>
       </div>
     </div>
 
@@ -83,6 +63,10 @@
 
       <hr />
 
+      <div>
+        <a href="/logout">Log Out</a>
+      </div>
+
     </div>
   </div>
 
@@ -91,14 +75,13 @@
       <hr />
       <div class="row">
         <div class="large-5 columns">
-          <p>&copy; RunGo</p>
+          <p>&copy; 2017 RunGo</p>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+  <% include ./partials/scripts %>
 </body>
 
 </html>
