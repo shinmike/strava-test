@@ -33,7 +33,6 @@ app.get('/tokenexchange', function (req, res) {
 		if (err) {
 			throw new Error("Unable to request access token");
     }
-    // console.log(req.session);
 		// req.session.strava_token = payload.access_token;
 		res.redirect('/logbook');
 	});
