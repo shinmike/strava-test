@@ -3,25 +3,27 @@
 
 <% include ./partials/head %>
 
-<body>
+  <body>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="panel">
-        <h1>Logbook</h1>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <h1>Logbook</h1>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
+    <div class="row">
 
 
-    <div style="text-align:center" class="large-3 columns ">
-      <div class="panel">
-        <h4>Hello, <%= athleteInfo.firstname %></h4>
-        <h5><b><%= athleteInfo.city %></b></h5>
+      <div style="text-align:center" class="large-3 columns ">
+        <div class="panel">
+          <h4>Hello,
+            <%= athleteInfo.firstname %>
+          </h4>
+          <h5><b><%= athleteInfo.city %></b></h5>
 
-        <!-- <ul>
+          <!-- <ul>
           <% for (var key in athleteInfo) { %>
             <li>
               <strong><%= key %>: </strong> <%= athleteInfo[key] %>
@@ -29,59 +31,53 @@
           <% } %>
         </ul> -->
 
-        <a href="#"><img src=<%= athleteInfo.profile %> /></a>
-      </div>
-    </div>
-
-
-    <div class="large-9 columns">
-
-      <div class="row">
-        <div class="large-2 columns small-3"><img src="https://placehold.it/80x80&text=[img]" /></div>
-        <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo,
-            chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-          <ul class="inline-list">
-            <li><a href="">Reply</a></li>
-            <li><a href="">Share</a></li>
-          </ul>
-          <h6>2 Comments</h6>
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="https://placehold.it/50x50&text=[img]" /></div>
-            <div class="large-10 columns">
-              <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="https://placehold.it/50x50&text=[img]" /></div>
-            <div class="large-10 columns">
-              <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p>
-            </div>
-          </div>
+          <a href="#"><img src=<%= athleteInfo.profile %> /></a>
         </div>
       </div>
 
-      <hr />
 
-      <div>
-        <a href="/logout">Log Out</a>
-      </div>
+      <div class="large-9 columns">
 
-    </div>
-  </div>
-
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-5 columns">
-          <p>&copy; 2017 RunGo</p>
+        <div class="row">
+          <div class="large-2 columns small-3"><img src="https://placehold.it/80x80&text=[img]" /></div>
+          <div class="large-10 columns">
+            <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo,
+              chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+            <ul class="inline-list">
+              <li><a href="">Reply</a></li>
+              <li><a href="">Share</a></li>
+            </ul>
+            <h6>2 Comments</h6>
+            <div class="row">
+              <div class="large-2 columns small-3"><img src="https://placehold.it/50x50&text=[img]" /></div>
+              <div class="large-10 columns">
+                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-2 columns small-3"><img src="https://placehold.it/50x50&text=[img]" /></div>
+              <div class="large-10 columns">
+                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <hr />
+
+        <div>
+          <a href="/">Landing Page</a>
+        </div>
+        <div>
+          <a href="/logout">Log Out</a>
+        </div>
+
       </div>
     </div>
-  </footer>
 
-  <% include ./partials/scripts %>
-</body>
+    <% include ./partials/footer %>
+
+      <% include ./partials/scripts %>
+  </body>
 
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <% include ./partials/head %>
+<% include ./partials/head %>
 
   <body style="text-align: center">
     <h1>RunGo Logbook</h1>
@@ -9,8 +9,8 @@
       <h2>a simplified strava training log</h2>
       <h3><small><a href=<%= strava_request_access_url %>>Log in to Strava</a></small></h3>
     </div>
-    
-    <% include ./partials/scripts %>
+    <% include ./partials/footer %>
+      <% include ./partials/scripts %>
   </body>
 
 </html>
